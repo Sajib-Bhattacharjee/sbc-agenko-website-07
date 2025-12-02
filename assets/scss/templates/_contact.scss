@@ -1,0 +1,109 @@
+
+
+@use "./../abstract";
+
+
+.contact-info-wrapper{
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid #313131;
+    background-color: #0E0F11;
+    margin-right: 100px;
+    padding: 60px 40px;
+    z-index: 1;
+    @include respond(laptop){
+        margin-right: 50px;
+    }
+    @include respond(tablet){
+        margin-right: 0;
+    }
+    @include respond(medium){
+        margin-right: 0;
+    }
+    @include respond(phone){
+        padding: 50px 30px;
+    }
+    & .shape{
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+    }
+    & ul{
+        & li{
+            
+            &:not(:last-child){
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+                border-bottom: 1px solid $border-color;   
+            }
+            &:first-child{
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+            & .phone{
+                font: 700 40px $heading-font;
+                color: $primary-color;
+                @include respond(tablet){
+                    font-size: 27px;
+                }
+                @include respond(medium){
+                    font-size: 27px;
+                }
+            }
+        }
+    }
+}
+
+.map-box{
+    & iframe{
+        height: 600px;
+    }
+}
+
+.agenko-contact-form{
+    &.style-one{
+        & .form_control{
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background-color: #1A1B1D;
+            padding: 15px 30px;
+            margin-bottom: 30px;
+            color: $white-color;
+            font: 700 20px $heading-font;
+            &::placeholder{
+                color: $white-color;
+            }
+        }
+        & .theme-btn{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $primary-color;
+            color: $heading-color;
+            font: 700 20px $heading-font;
+            border-radius: 10px;
+            padding: 16px 30px;
+        }
+    }
+    & .form_control{
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        background-color: #1A1B1D;
+        padding: 15px 30px;
+        margin-bottom: 30px;
+        color: $white-color;
+        font: 700 20px $heading-font;
+        &::placeholder{
+            color: $white-color;
+        }
+    }
+    &.style-two{
+        & .theme-btn{
+            width: 100%;
+            padding: 15px 30px;
+            border-radius: 10px;
+        }
+    }
+}

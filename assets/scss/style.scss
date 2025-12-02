@@ -1,0 +1,63 @@
+
+/*----------------------------------------------------------------------------------- 
+
+Template Name: Agenko - Creative Digital Agency HTML Template
+URI: pixelfit.agency
+Description: Agenko is a fully responsive, high-performance HTML template crafted for digital agencies, startups, creative firms, and more. Designed with modern web standards in mind, Agenko provides an elegant foundation for building visually striking websites.
+Author: Pixelfit
+Author URI: https://themeforest.net/user/pixelfit
+Version: 1.0 
+
+
+------------------------------------------------------
+   CSS INDEX
+-----------------------------------------------------
+
+    01. Base CSS 
+        # Base CSS
+        # Common CSS
+    02. Components CSS 
+        # Header CSS
+        # Elements CSS
+        # Project
+        # Accordion
+        # Pricing
+        # Team
+        # Testimonial
+        # Blogs
+        # Footer
+    03. Templates
+        # Banner
+        # Service
+        # Sections
+        # Contact    
+-------------------------------------------------------    */
+
+
+// Abstract
+
+@import "abstract";
+
+// Base
+
+@import "base/base";
+@import "base/common";
+
+// Components
+
+@import "components/header";
+@import "components/elements";
+@import "components/project";
+@import "components/accordion";
+@import "components/pricing";
+@import "components/team";
+@import "components/testimonial";
+@import "components/blogs";
+@import "components/footer";
+
+// Templates
+
+@import "templates/banner";
+@import "templates/services";
+@import "templates/sections";
+@import "templates/contact";

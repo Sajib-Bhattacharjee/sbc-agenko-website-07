@@ -1,0 +1,78 @@
+
+@mixin respond($breakpoints){
+
+    @if $breakpoints == phone{
+        @media (max-width: 767px) { 
+            @content
+        }
+    }
+    @if $breakpoints == sm-phone{
+        @media (max-width: 575px) { 
+            @content
+        }
+    }
+    @if $breakpoints == phone-wide{
+        @media (max-width: 576px) and (max-width: 767px) {
+            @content
+        }
+    }
+    @if $breakpoints == medium{
+        @media screen and (max-width: 991px) {
+            @content
+        }
+    }
+    @if $breakpoints == tablet{
+        @media screen and (min-width: 992px) and (max-width: 1200px) { 
+            @content
+        }
+    }
+    @if $breakpoints == laptop{
+        @media (min-width: 1200px) and (max-width: 1450px) {
+            @content
+        }
+    }
+}
+
+
+@mixin transition($time) {
+	-webkit-transition: all $time ease-out 0s;
+	-moz-transition: all $time ease-out 0s;
+	-ms-transition: all $time ease-out 0s;
+	-o-transition: all $time ease-out 0s;
+	transition: all $time ease-out 0s;
+  }
+  
+  
+  @mixin transform($value) {
+	-webkit-transform: $value;
+	   -moz-transform: $value;
+		-ms-transform: $value;
+		 -o-transform: $value;
+			transform: $value;
+  }
+  
+  @mixin box-sizing($value) {
+	-webkit-box-sizing: $value;
+	   -moz-box-sizing: $value;
+			box-sizing: $value;
+  }
+
+  @mixin border-radius($value) {
+			border-radius: $value;
+  }
+
+  
+  @mixin box-shadow($value) {
+	-webkit-box-shadow: $value;
+	   -moz-box-shadow: $value;
+			box-shadow: $value;
+  }
+  
+  
+  // Placeholder Mixins
+@mixin placeholder {
+	  &.placeholder { @content; }
+	  &:-moz-placeholder { @content; }
+	  &::-moz-placeholder { @content; }
+	  &::-webkit-input-placeholder { @content; }
+}

@@ -1,0 +1,459 @@
+
+@use "./../abstract";
+
+
+.hero-wrapper-one{
+    background-color: #000;
+    padding: 180px 0 200px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    & .shape{
+        position: absolute;
+        z-index: -1;
+        &.shape-blur_one{
+            top: -30%;
+            left: -25%;
+            & span{
+                width: 760px;
+                height: 760px;
+                border-radius: 50%;
+                background: rgba(156, 254, 79, 0.60);
+                filter: blur(200px);
+                @include respond(tablet){
+                    width: 500px;
+                    height: 500px;
+                    filter: blur(100px);
+                }
+                @include respond(medium){
+                    width: 360px;
+                    height: 360px;
+                    filter: blur(100px);
+                }
+            }
+        }
+        &.shape-blur_two{
+            top: -30%;
+            right: -15%;
+            & span{
+                width: 660px;
+                height: 660px;
+                border-radius: 50%;
+                background: #8778F5;
+                filter: blur(150px);
+                @include respond(tablet){
+                    width: 500px;
+                    height: 500px;
+                    filter: blur(100px);
+                }
+                @include respond(medium){
+                    width: 300px;
+                    height: 300px;
+                    filter: blur(70px);
+                }
+            }
+        }
+        &.shape-blur_three{
+            bottom: -70%;
+            left: 50%;
+            @include transform(translateX(-50%));
+            & span{
+                width: 760px;
+                height: 760px;
+                border-radius: 50%;
+                background: rgba(156, 254, 79, 0.60);
+                filter: blur(200px);
+            }
+        }
+    }
+    & .hero-content{
+        position: relative;
+        margin-bottom: 130px;
+        & h1{
+            font-size: 200px;
+            line-height: 1;
+            @include respond(tablet){
+                font-size: 140px;
+            }
+            @include respond(medium){
+                font-size: 80px;
+            }
+            @include respond(phone){
+                font-size: 60px;
+            }
+        }
+        & .big-text{
+            font-size: 200px;
+            line-height: 1;
+            font-weight: 700;
+            color: $white-color;
+            text-align: right;
+            @include respond(tablet){
+                font-size: 130px;
+            }
+            @include respond(medium){
+                font-size: 80px;
+            }
+            @include respond(phone){
+                font-size: 60px;
+            }
+        }
+        & .text-box{
+            position: absolute;
+            bottom: 20%;
+            left: 0;
+            max-width: 400px;
+            @include respond(medium){
+                bottom: 30%;
+                max-width: 350px;
+            }
+            @include respond(phone){
+                position: relative;
+                bottom: auto;
+                left: auto;
+                margin-top: 45px;
+            }
+        }
+        & .element{
+            position: absolute;
+            top: 5%;
+            right: 15%;
+            @include respond(phone){
+                top: 0;
+            }
+        }
+        & .hero-button{
+            @include respond(medium){
+                margin-top: 60px;
+            }
+        }
+    }
+}
+
+.hero-wrapper-two{
+    position: relative;
+    z-index: 1;
+    padding: 180px 0 130px;
+    background-color: #000;
+    overflow: hidden;
+    & .shape{
+        position: absolute;
+        z-index: -1;
+        &.shape-one{
+            top: 17%;
+            left: 10%;
+            @include respond(medium){
+                top: 8%;
+            }
+        }
+        &.shape-two{
+            top: 33%;
+            right: 10%;
+        }
+        &.circle-one{
+            top: -20%;
+            left: -10%;
+            & span{
+                width: 980px;
+                height: 980px;
+                border-radius: 50%;
+                border: 1px solid rgba(255, 255, 255, 0.20);
+            }
+            @include respond(medium){
+                display: none;
+            }
+        }
+        &.circle-two{
+            top: -50%;
+            right: -5%;
+            & span{
+                width: 760px;
+                height: 760px;
+                border-radius: 50%;
+                border: 1px solid rgba(255, 255, 255, 0.20);
+            }
+        }
+    }
+    & .hero-content{
+        position: relative;
+        margin-bottom: 80px;
+        & h1{
+            font-size: 140px;
+            line-height: 160px;
+            color: $white-color;
+            @include respond(medium){
+                font-size: 70px;
+                line-height: 90px;
+                margin-bottom: 30px;
+            }
+            @include respond(phone){
+                font-size: 50px;
+                line-height: 60px;
+                margin-bottom: 30px;
+            }
+        }
+        & .text-box{
+            max-width: 530px;
+            position: absolute;
+            bottom: 5%;
+            right: 20%;
+            & p{
+                margin-bottom: 25px;
+                & span{
+                    color: $white-color;
+                }
+            }
+            @include respond(laptop){
+                right: 10%;
+            }
+            @include respond(tablet){
+                position: relative;
+                bottom: auto;
+                right: auto;
+                margin-top: 35px;
+            }
+            @include respond(medium){
+                position: relative;
+                bottom: auto;
+                right: auto;
+            }
+        }
+        & .pro{
+            position: absolute;
+            top: 15%;
+            right: 15%;
+            border: 1px solid $primary-color;
+            padding: 20px 25px;
+            font-size: 50px;
+            color: $primary-color;
+            border-radius: 40px;
+            @include respond(tablet){
+                top: 45%;
+                right: 35%;
+            }
+            @include respond(medium){
+                display: none;
+            }
+            @include respond(laptop){
+                right: 5%;
+            }
+        }
+    }
+    & .service-list{
+        display: flex;
+        flex-direction: column;
+        @include respond(phone){
+            margin-bottom: 30px;
+        }
+        & li{
+            margin-bottom: 15px;
+            @include respond(phone){
+                margin: 0 auto 15px;
+            }
+            &:nth-child(odd){
+                transform: rotate(-3deg);
+            }
+            &:nth-child(even){
+                transform: rotate(3deg);
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+.hero-image{
+    &.style-one{
+        & img{
+            border-radius: 30px;
+        }
+    }
+}
+
+
+
+.agk-video{
+    position: relative;
+    z-index: 1;
+    margin-top: -200px;
+    & .agk-play-image-box{
+        & .agk-image{
+            & img{
+                border-radius: 15px;
+            }
+        }
+    }
+}
+
+.text-box{
+    max-width: 530px;
+    & p{
+        & span{
+            color: $white-color;
+        }
+    }
+}
+
+/* Hero Wrapper Three */ 
+
+.hero-wrapper-three{
+    padding: 160px 0;
+    & .hero-content{
+        & h1{
+            & span{
+                position: relative;
+                padding: 5px 20px;
+                color: $heading-color;
+                z-index: 1;
+                &:after{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    content: '';
+                    background-color: $primary-color;
+                    border-radius: 15px;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                    transform: skewX(-10deg);
+                }
+            }
+            @include respond(phone){
+                font-size: 48px;
+                line-height: 60px;
+            }
+        }
+    }
+    & .hero-image-box{
+        margin: 0 50px;
+        position: relative;
+        @include respond(medium){
+            margin: 0 15px;
+        }
+        & img{
+            border-radius: 40px;
+            width: 100%;
+            min-height: 400px;
+            @include respond(medium){
+                object-fit: cover;
+            }
+        }
+        & .text-box{
+            position: absolute;
+            top: 0;
+            right: 10%;
+            text-align: left;
+            @include respond(tablet){
+                right: 5%;
+            }
+            @include respond(medium){
+                position: relative;
+                top: auto;
+                right: auto;
+                margin-top: 40px;
+            }
+        }
+        & svg{
+            position: absolute;
+            right: -1px;
+            top: -1px;
+            @include respond(tablet){
+                top: -15px;
+                width: 75%;
+            }
+            @include respond(medium){
+                display: none;
+            }
+        }
+    }
+}
+
+/* Page Banner CSS */ 
+
+.agenko-page-banner{
+    padding: 187px 0 120px;
+    background-color: $gray-dark;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    @include respond(phone){
+        padding-bottom: 80px;
+    }
+    & .shape{
+        position: absolute;
+        z-index: -1;
+        & span{
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.20);
+        }
+        &.shape-circle1{
+            top: -45%;
+            left: -5%;
+            & span{
+                width: 979px;
+                height: 979px;
+            }
+        }
+        &.shape-circle2{
+            top: -120%;
+            right: 0;
+            & span{
+                width: 765px;
+                height: 765px;
+            }
+        }
+    }
+    & .page-content{
+        & h1{
+            margin-bottom: 40px;
+            @include respond(laptop){
+                font-size: 60px;
+                margin-bottom: 30px;
+            }
+            @include respond(tablet){
+                font-size: 52px;
+                margin-bottom: 20px;
+            }
+            @include respond(medium){
+                font-size: 42px;
+                line-height: 50px;
+            }
+        }
+        & .text-box{
+            & .icon{
+                margin-right: 30px;
+                flex: 0 0 auto;
+                width: 85px;
+            }
+        }
+        & ul.breadcrumb-link{
+            display: block;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background-color: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(5px);
+            padding: 10px 30px;
+            float: right;
+            @include respond(tablet){
+                float: left;
+                margin-top: 30px;
+            }
+            @include respond(medium){
+                float: left;
+                margin: 40px 0;
+            }
+            & li{
+                display: inline-block;
+                &:not(:last-child){
+                    &:after{
+                        display: inline-block;
+                        content: '|';
+                        margin-left: 13px;
+                        margin-right: 13px;
+                    }
+                }
+                &.active{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}

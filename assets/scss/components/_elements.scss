@@ -1,0 +1,631 @@
+
+@use "./../abstract";
+
+/* Agenko Eotate Image */
+
+.agenko-rotate-image{
+    text-align: center;
+    & .agenko-image{
+        & img{
+            transform: rotate(-10deg);
+            border-radius: 20px;
+        }
+    }
+}
+
+/* Agenko Dot */
+
+.agenko-dot{
+    position: relative;
+    z-index: 1;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $primary-color;
+}
+
+/* Agenko Icon Button */
+
+.icon-btn{
+    &.style-one{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $gray-dark;
+        transition: all .3s;
+        & i{
+            transition: all .35s;
+        }
+    }
+}
+
+/* Agenko Setp */
+
+.agenko-step{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary-color;
+    color: $heading-color;
+    border-radius: 30px;
+    padding: 5px 15px;
+    line-height: 20px;
+}
+
+/* Agenko Iconic Box */
+
+.agenko-iconic-box{
+    &.style-one{
+        padding: 23px 20px;
+        display: flex;
+        align-items: center;
+        max-width: 300px;
+        background-color: $gray-dark;
+        border: 1px solid $border-color;
+        border-radius: 60px;
+        transition: all .3s;
+        &:hover{
+            background-color: $primary-color;
+            & .content{
+                & h4.title{
+                    color: $heading-color;
+                }
+            }
+        }
+        & .icon{
+            flex: 0 0 auto;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #2F3031;
+            font-size: 30px;
+            color: $white-color;
+            margin-right: 15px;
+        }
+        & .content{
+            & h4.title{
+                font-size: 20px;
+                color: $white-color;
+                line-height: 1.4;
+            }
+        }
+    }
+    &.style-two{
+        background-color: $gray-dark;
+        padding: 30px;
+        @include respond(laptop){
+            padding: 30px 25px 30px;
+        }
+        & .icon{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid $border-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            color: $white-color;
+            font-size: 20px;
+        }
+        & .content{
+            & h4{
+                margin-bottom: 15px;
+            }
+            & p{
+                margin-bottom: 40px;
+            }
+            & .step{
+                display: inline-block;
+                padding: 7px 10px;
+                line-height: 10px;
+                color: $heading-color;
+                background-color: $primary-color;
+                border-radius: 30px;
+                letter-spacing: 0.48px;
+            }
+        }
+    }
+    &.style-three{
+        display: flex;
+        flex-wrap: wrap;
+        & .icon{
+            flex: 0 0 auto;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.10);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-inline-end: 20px;
+        }
+        & .content{
+            & h6{
+                margin-bottom: 10px;
+            }
+            & p{
+                letter-spacing: 0.48px;
+                line-height: 20px;
+                &:hover{
+                    a{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+    &.style-four{
+        background-color: $gray-dark;
+        padding: 35px 40px 30px;
+        @include respond(tablet){
+            padding: 35px 30px 30px;
+        }
+        @include respond(medium){
+            margin-top: 40px;
+        }
+        & .icon{
+            font-size: 60px;
+            color: $white-color;
+            margin-bottom: 25px;
+        }
+        & .content{
+            & h4.title{
+                margin-bottom: 20px;
+                @include respond(tablet){
+                    font-size: 20px;
+                }
+            }
+            & p{
+                margin-bottom: 25px;
+            }
+        }
+    }
+    &.style-five{
+        background-color: $gray-dark;
+        padding: 30px;
+        @include respond(laptop){
+            padding: 30px 25px;
+        }
+        @include respond(tablet){
+            padding: 30px 10px;
+        }
+        & .icon{
+            font-size: 40px;
+            color: $white-color;
+            margin-bottom: 30px;
+        }
+        & .content{
+            & h5{
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &.style-six{
+        background-color: $gray-dark;
+        padding: 40px;
+        & > .icon{
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+        & .content{
+            & h4{
+                margin-bottom: 15px;
+            }
+            & p{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &.style-seven{
+        background-color: $primary-black-color;
+        padding: 30px;
+        &:hover{
+            & .icon{
+                color: $primary-color;
+            }
+        }
+        & .icon{
+            font-size: 60px;
+            color: $white-color;
+            margin-bottom: 15px;
+        }
+        & .content{
+            & h4{
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &.style-eight{
+        & .agenko-dot{
+            @include respond(medium){
+                display: none;
+            }
+        }
+        & .content{
+            & .number{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: $gray-dark;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+            & h4{
+                margin-bottom: 20px;
+            }
+            & p{
+                margin-bottom: 35px;
+            }
+        }
+    }
+}
+
+/* Agenko Card Item */
+
+.agenko-card-item{
+    &.style-one{
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        background-color: $primary-black-color;
+        border: 1px solid $border-color;
+        border-radius: 40px;
+        @include respond(tablet){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        @include respond(medium){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        & .card-title{
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            & .sn-number{
+                font-size: 40px;
+                margin-right: 30px;
+                font-family: $heading-font;
+                font-weight: 700;
+                @include respond(phone){
+                    font-size: 20px;
+                    margin-right: 15px;
+                }
+            }
+            & h3{
+                @include respond(phone){
+                    font-size: 18px;
+                }
+            }
+        }
+        & .content{
+            @include respond(tablet){
+                padding: 20px 0;
+            }
+            @include respond(medium){
+                padding: 20px 0;
+            }
+            & p{
+                max-width: 430px;
+                padding: 0 30px;
+                & span{
+                    color: $white-color;
+                }
+                @include respond(tablet){
+                    max-width: 100%;
+                    padding: 0;
+                }
+                @include respond(medium){
+                    max-width: 100%;
+                    padding: 0;
+                }
+            }
+        }
+    }
+    &.style-two{
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        background-color: $gray-dark;
+        border-radius: 15px;
+        transition: all .3s;
+        @include respond(medium){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &:hover{
+            background-color: $primary-color;
+            & .card-title{
+                & h2{
+                    color: $heading-color;
+                }
+                & h4{
+                    color: $heading-color;
+                }
+            }
+            & .content{
+                & p{
+                    color: $heading-color;
+                }
+            }
+        }
+        & .thumbnail{
+            @include respond(tablet){
+                max-width: 200px;
+            }
+            & img{
+                border-radius: 110px;
+                @include respond(medium){
+                    border-radius: 30px;
+                }
+            }
+        }
+        & .card-title{
+            flex-grow: 1;
+            padding-left: 10%;
+            @include respond(laptop){
+                padding-left: 5%;
+            }
+            @include respond(tablet){
+                padding-left: 5%;
+            }
+            @include respond(medium){
+                padding-left: 0;
+                padding: 30px 0;
+            }
+            & h2{
+                @include respond(laptop){
+                    font-size: 37px;
+                    line-height: 45px;
+                }
+                @include respond(tablet){
+                    font-size: 27px;
+                    line-height: 40px;
+                }
+                @include respond(medium){
+                    font-size: 24px;
+                    line-height: 35px;
+                }
+            }
+            & h4{
+                color: $text-color;
+                font-family: $body-font;
+                @include respond(tablet){
+                    font-size: 22px;
+                    line-height: 35px;
+                }
+                @include respond(medium){
+                    font-size: 22px;
+                    line-height: 35px;
+                }
+            }
+        }
+        & .content{
+            max-width: 385px;
+            @include respond(medium){
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+/* Agenko Client Item */ 
+
+.agenko-client-item{
+    &.style-one{
+        padding: 60px 20px;
+        text-align: center;
+        border: 1px solid $border-color;
+        @include respond(phone){
+            padding: 20px 15px;
+        }
+        &:hover{
+            & .client-image{
+                & img{
+                    opacity: 1;
+                }
+            }
+        }
+        & .client-image{
+            cursor: pointer;
+            & img{
+                opacity: .7;
+                transition: all .3s;
+            }
+        }
+    }
+    &.style-two{
+        width: 235px;
+        height: 235px;
+        border-radius: 50%;
+        background-color: $gray-dark;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include respond(laptop){
+            width: 200px;
+            height: 200px;
+        }
+        @include respond(tablet){
+            width: 170px;
+            height: 170px;
+        }
+        @include respond(medium){
+            width: 200px;
+            height: 200px;
+        }
+        & .client-image{
+            & img{
+                filter: grayscale(1);
+                max-width: 150px;
+                @include respond(tablet){
+                    max-width: 120px;
+                }
+            }
+        }
+    }
+}
+
+/* Agenko Experince Box */ 
+
+.agenko-experince-box{
+    &.style-one{
+        display: inline-block;
+        background-color: $primary-color;
+        padding: 20px 25px;
+        border-radius: 10px;
+        max-width: 160px;
+        text-align: center;
+        & h2{
+            color: $heading-color;
+            margin-bottom: 10px;
+        }
+        & p{
+            font-size: 16px;
+            line-height: 26px;
+            color: $heading-color;
+        }
+    }
+}
+
+/* Agenko Skill Item */ 
+
+.agenko-skill-item{
+    &.style-one{
+        & .progress-title{
+            margin-bottom: 15px;
+            & h5{
+                & span{
+                    float: right;
+                }
+            }
+        }
+        & .progress{
+            height: 6px;
+            border-radius: 0;
+            background-color: rgba(255, 255, 255, 0.10);
+            & .progress-bar{
+                border-radius: 0;
+                background-color: $primary-color;
+            }
+        }
+    }
+}
+
+/* Agenko Award Box */ 
+
+.agenko-award-box{
+    &.style-one{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: $gray-dark;
+        justify-content: space-between;
+        align-items: center;
+        padding: 26px 40px;
+        @include respond(phone){
+            justify-content: center;
+            text-align: center;
+        }
+        &:hover{
+            & .award-date h5,
+            & .award-platform h5{
+                color: $white-color;
+            }
+            & .award-name{
+                & h5{
+                    color: $primary-color;
+                }
+            }
+        }
+        & .award-platform{
+            width: 30%;
+            @include respond(phone){
+                width: 100%;
+            }
+            & h5{
+                font-size: 18px;
+                color: $text-color;
+            }
+        }
+        & .award-name{
+            width: 50%;
+            @include respond(phone){
+                width: 100%;
+            }
+            @include respond(phone){
+                padding: 20px 0;
+            }
+        }
+        & .award-date{
+            width: 20%;
+            text-align: right;
+            & h5{
+                font-size: 18px;
+                color: $text-color;
+            }
+            @include respond(phone){
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+/* Agenko Counter Box */ 
+
+.agenko-counter-box{
+    &.style-one{
+        & .content{
+            & h2{
+                color: #EBFFDC;
+            }
+        }
+    }
+    &.style-two{
+        & .content{
+            & h2{
+                margin-bottom: 15px;
+            }
+            & p{
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.agenko-info-box{
+    & .content{
+        & h3{
+            margin-bottom: 15px;
+        }
+        & p{
+            font: 500 20px $heading-font;
+            margin-bottom: 10px;
+        }
+        & .social-link{
+            & a{
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                background-color: $white-color;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                color: $heading-color;
+                margin-right: 5px;
+                &:hover{
+                    background-color: $primary-color;
+                }
+            }
+        }
+    }
+}

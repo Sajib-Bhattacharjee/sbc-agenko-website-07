@@ -1,0 +1,96 @@
+@use "./../abstract";
+
+
+.agenko-pricing-item{
+    &.style-one{
+        position: relative;
+        z-index: 1;
+        background-color: $gray-dark;
+        padding: 30px;
+        & .shape{
+            position: absolute;
+            z-index: -1;
+            &.shape-one{
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+        & .pricing-head{
+            margin-bottom: 25px;
+            & h2{
+                margin-bottom: 15px;
+                @include respond(tablet){
+                    font-size: 27px;
+                    line-height: 1.2;
+                }
+                @include respond(phone){
+                    font-size: 24px;
+                    line-height: 1.2;
+                }
+            }
+        }
+        & .pricing-body{
+            margin-bottom: 25px;
+        }
+        & .pricing-footer{
+            & .theme-btn{
+                &.style-two{
+                    padding: 12px 30px;
+                }
+            }
+        }
+    }
+    &.style-two{
+        background-color: $gray-dark;
+        padding: 30px 30px 25px;
+        & .pricing-head{
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            & h4{
+                flex-grow: 1;
+            }
+            & .pricing{
+                color: $primary-color;
+                font-size: $h3-font;
+                font-weight: 700;
+                font-family: $heading-font;
+            }
+        }
+    }
+    &.style-three{
+        background-color: $gray-dark;
+        padding: 40px 35px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        & .shape{
+            position: absolute;
+            top: -35%;
+            right: -40%;
+            & span{
+                width: 328px;
+                height: 328px;
+                border-radius: 50%;
+                border: 50px solid rgba(235, 255, 220, 0.02);
+            }
+        }
+        & .pricing-head{
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid $border-color;
+            & h2{
+                margin-bottom: 15px;
+            }
+        }
+        & .pricing-body{
+            margin-bottom: 25px;
+        }
+        & .pricing-footer{
+            & .theme-btn{
+                width: 100%;
+                padding: 15px 35px;
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+
+@use "./../abstract";
+
+
+/*  Accordion Item */
+
+.agenko-accordion-item{
+    border-radius: 10px;
+    border: 1px solid rgba(16, 16, 16, 0.10);
+    background-color: $gray-dark;
+    padding: 16px 30px;
+    @include respond(xs){
+        padding: 13px 15px;
+    }
+    & .accordion-header{
+        & .accordion-title{
+            line-height: 25px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            @include respond(sm-phone){
+                align-items: flex-start;
+                font-size: 16px;
+            }
+            &  span.sn{
+                margin-right: 8px;
+            }
+            &:after{
+                flex: 0 0 auto;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                content: '\f067';
+                font-family: 'Font Awesome 5 Pro';
+                font-weight: 400;
+                margin-left: auto;
+                transition: all .3s;
+            }
+        }
+        & .accordion-title[aria-expanded=true]{
+            &:after{
+                border-color: #26272B;
+                content: '\f068';
+            }
+        }
+    }
+    & .accordion-content{
+        & p{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            letter-spacing: 0.48px;
+        }
+    }
+}

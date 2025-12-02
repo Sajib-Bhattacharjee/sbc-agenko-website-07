@@ -1,0 +1,208 @@
+/*---- 
+====================
+3. Components CSS
+    # Header CSS
+====================
+
+----*/ 
+
+@use "./../abstract";
+
+
+
+.agenko-footer{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    & .shape{
+        position: absolute;
+        z-index: -1;
+        &.shape-one{
+            left: -35px;
+            bottom: 110px;
+            @include respond(laptop){
+                & img{
+                    width: 50%;
+                }
+            }
+            @include respond(tablet){
+                display: none;
+            }
+            @include respond(medium){
+                display: none;
+            }
+        }
+        &.shape-two{
+            bottom: 140px;
+            right: 130px;
+        }
+        &.shape-blur_one{
+            top: -150px;
+            left: -150px;
+            & span{
+                width: 261px;
+                height: 261px;
+                background-color: rgba(155, 254, 79, 0.5);
+                // background-color: $primary-color;
+                filter: blur(80px);
+            }
+        }
+        &.shape-blur_two{
+            bottom: -150px;
+            right: -150px;
+            & span{
+                width: 261px;
+                height: 261px;
+                background-color: rgba(202, 186, 231, 0.6);
+                // background-color: $primary-color;
+                filter: blur(80px);
+            }
+        }
+    }
+}
+
+.footer-widget{
+    color: $white-color;
+    & .footer-content{
+        & .widget-title{
+            margin-bottom: 15px;
+        }
+        & .footer-logo{
+            padding: 5px;
+            display: inline-block;
+            border-radius: 40px;
+            border: 1px solid var(--Stock-Color, #313131);
+            background-color: #0E0F11;
+            margin-bottom: 20px;
+        }
+        & ul{
+            & li{
+                &:not(:last-child){
+                    margin-bottom: 13px;
+                }
+                & a{
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+        & .form-group{
+            max-width: 340px;
+            & .form_control{
+                width: 100%;
+                background-color: $white-color;
+                border-radius: 30px;
+                padding: 10px 130px 10px 50px;
+                color: $heading-color;
+                border: none;
+                &::placeholder{
+                    color: $heading-color;  
+                }
+            }
+            & label{
+                position: absolute;
+                top: 12px;
+                left: 20px;
+                color: $heading-color;
+            }
+            & .theme-btn{
+                position: absolute;
+                top: 5px;
+                right: 5px;
+            }
+        }
+    }
+    &.footer-about-widget{
+        & .footer-content{
+            & p{
+                max-width: 340px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &.footer-contact-info-widget{
+        padding-left: 40px;
+        @include respond(tablet){
+            padding-left: 0;
+        }
+        @include respond(medium){
+            padding-left: 0;
+        }
+        & .footer-content{
+            & p{
+                max-width: 230px;
+                line-height: 27px;
+                letter-spacing: 0.48px;
+            }
+        }
+    }
+    &.footer-nav-widget{
+        padding-left: 40px;
+        @include respond(tablet){
+            padding-left: 0;
+        }
+        @include respond(medium){
+            padding-left: 0;
+        }
+    }
+    &.footer-contact-widget{
+        & .footer-content{
+            & h4.widget-title{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.footer-copyright{
+    border-top: 1px solid $border-color;
+    padding: 35px 0 30px;
+    & .copyright-text{
+        @include respond(phone){
+            text-align: center;
+        }
+        & p{
+            font: 500 18px $heading-font;
+            color: $white-color;
+            & span{
+                color: $primary-color;
+            }
+        }
+    }
+    & .copyright-nav{
+        float: right;
+        @include respond(phone){
+            float: none;
+            text-align: center;
+        }
+        & ul{
+            & li{
+                display: inline-block;
+                &:not(:last-child){
+                    margin-right: 20px;
+                }
+                @include respond(phone){
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    &:not(:last-child){
+                        margin-right: 0px;
+                    }
+                }
+                & a{
+                    font: 500 18px $heading-font;
+                    color: $white-color;
+                    &:hover{
+                        color: $primary-color;
+                    }
+                    @include respond(phone){
+                        font-size: 16px;
+                    }
+                    @include respond(medium){
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

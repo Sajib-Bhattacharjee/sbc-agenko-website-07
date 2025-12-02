@@ -1,0 +1,48 @@
+
+@use "./../abstract";
+
+.agk-service-ca{
+    & .text-box{
+        max-width: 300px;
+    }
+}
+
+.agk-process-box{
+    text-align: center;
+    & .agenko-step{
+        margin-bottom: 40px;
+        position: relative;
+        z-index: 1;
+        &::after{
+            position: absolute;
+            content: '';
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 40px;
+            background-color: $border-color;
+            z-index: -1;
+        }
+    }
+}
+
+.agk-company-ca{
+    & .client-list{
+        padding-left: 100px;
+        @include respond(medium){
+            padding-left: 0;
+        }
+        & ul{
+            & li{
+                flex: 0 0 33.33%;
+            }
+        }
+    }
+}
+
+.agk-award-ca{
+    & .text-box{
+        max-width: 300px;
+    }
+}

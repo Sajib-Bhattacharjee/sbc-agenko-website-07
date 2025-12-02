@@ -1,0 +1,205 @@
+
+@use "./../abstract";
+
+
+.agenko-team-item{
+    &.style-one{
+        & .member-image{
+            position: relative;
+            & img{
+                width: 100%;
+            }
+            & .icon-btn{
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                & a{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: $white-color;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $heading-color;
+                }
+            }
+        }
+        & .member-info{
+            padding-top: 5px;
+            & span{
+                display: inline-flex;
+                align-items: center;
+                margin-bottom: 15px;
+                &:before{
+                    display: inline-flex;
+                    content: '';
+                    width: 50px;
+                    height: 1px;
+                    background-color: $border-color;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    &.style-two{
+        &:hover{
+            & .member-image{
+                & .hover-content{
+                    right: 30px;
+                }
+            }
+        }
+        & .member-image{
+            position: relative;
+            overflow: hidden;
+            & .hover-content{
+                position: absolute;
+                bottom: 30px;
+                right: -50%;
+                transition: all .4s;
+                & ul.social-link{
+                    & li{
+                        &:not(:last-child){
+                            margin-bottom: 10px;
+                        }
+                        & a{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 50%;
+                            background-color: $white-color;
+                            color: $heading-color;
+                            &:hover{
+                                background-color: $primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .member-info{
+            padding-top: 20px;
+        }
+    }
+    &.style-three{
+        &:hover{
+            & .member-image{
+                & .hover-content{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            & .member-info{
+                transform: translateY(0px);
+            }
+        }
+        & .member-image{
+            position: relative;
+            z-index: 1;
+            & img{
+                width: 100%;
+            }
+            & .hover-content{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                text-align: center;
+                padding: 30px;
+                background: linear-gradient(180deg, rgba(235, 255, 220, 0.00) 17.41%, #EBFFDC 90.28%);
+                visibility: hidden;
+                opacity: 0;
+                transition: all .3s;
+            }
+        }
+        & .member-info{
+            transform: translateY(-30px);
+            transition: all .35s;
+            & ul.social-link{
+                margin-top: 20px;
+                & li{
+                    display: inline-block;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    & a{
+                        display: block;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        background-color: $white-color;
+                        color: $heading-color;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+            & h4{
+                color: $heading-color;
+            }
+            & span.position{
+                font: 700 18px $heading-font;
+                color: $heading-color;
+            }
+        }
+    }
+    &.style-four{
+        &:hover{
+            & .member-image{
+                & .hover-content{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+        & .member-image{
+            position: relative;
+            z-index: 1;
+            & img{
+                width: 100%;
+            }
+            & .hover-content{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(156, 254, 79, 0.10);
+                visibility: hidden;
+                opacity: 0;
+                transition: all .3s;
+            }
+            & .social-box{
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                & a{
+                    margin-bottom: 10px;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: $white-color;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $heading-color;
+                    &:hover{
+                        background-color: $primary-color;
+                        color: $heading-color;
+                    }
+                }
+            }
+        }
+        & .member-info{
+            padding-top: 20px;
+        }
+    }
+}

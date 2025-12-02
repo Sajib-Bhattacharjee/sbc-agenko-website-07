@@ -1,0 +1,46 @@
+
+// Colors
+
+.primary-color{
+    color: var(--primary-color);
+}
+.secondary-color{
+    color: var(--secondary-color);
+}
+.heading-color{
+    color: var(--heading-color);
+}
+.primary-black-color{
+    color: var(--primary-black-color);
+}
+.white-color{
+    color: var(--white-color);
+}
+.text-color{
+    color: var(--text-color);
+}
+.border-color{
+    color: var(--border-color);
+}
+
+// Background Colors
+
+.primary-bgc{
+    background-color: var(--primary-color);;
+}
+.secondary-bgc{
+    background-color: var(--secondary-color);
+}
+.primary-black-bgc{
+    background-color: var(--primary-black-color);
+}
+.white-bgc{
+    background-color: var(--white-color);
+}
+// Flex-center
+
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,238 @@
+
+
+@use "./../abstract";
+
+.agenko-project-item{
+    &:hover{
+        & .thumbnail{
+            & img{
+                transform: scale(1.1);
+            }
+        }
+    }
+    & .thumbnail{
+        overflow: hidden;
+        & img{
+            transform: scale(1);
+            transition: all .4s;
+        }
+    }
+    &.style-one{
+        @include respond(medium){
+            max-width: 550px;
+            margin: 0 auto 45px;
+        }
+        &:hover{
+            & .thumbnail{
+                & .project-button{
+                    & a{
+                        background-color: $primary-color;
+                        color: $heading-color;
+                    }
+                }
+            }
+        }
+        & .thumbnail{
+            position: relative;
+            & img{
+                border-radius: 10px;
+            }
+            & .project-button{
+                & a{
+                    position: absolute;
+                    bottom: 30px;
+                    right: 30px;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $primary-black-color;
+                    color: $white-color;
+                    font-size: 20px;
+                    transition: all .3s;
+                }
+            }
+        }
+        & .content{
+            padding-top: 20px;
+            & .project-categories{
+                margin-bottom: 15px;
+                & a{
+                    padding: 10px 20px;
+                    border: 1px solid $border-color;
+                    border-radius: 30px;
+                    line-height: 18px;
+                    margin-bottom: 10px;
+                    &:not(:last-child){
+                        margin-right: 5px;
+                    }
+                }
+            }
+            & h4.title{
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    &.style-two{
+        padding: 30px 30px 25px;
+        background-color: $gray-dark;
+        border-radius: 20px;
+        @include respond(medium){
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+        @include respond(sm-phone){
+            padding: 30px 15px 25px;
+        }
+        & .thumbnail{
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            & img{
+                width: 100%;
+                border-radius: 20px;
+            }
+            & .hover-content{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                padding: 30px;
+                @include respond(sm-phone){
+                    padding: 15px;
+                }
+                & .project-categories{
+                    & a{
+                        padding: 9px 20px;
+                        border: 1px solid $border-color;
+                        border-radius: 30px;
+                        background-color: $gray-dark;
+                        color: $white-color;
+                        line-height: 20px;
+                        margin-bottom: 10px;
+                        @include respond(sm-phone){
+                            padding: 9px 15px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        & .content{
+            padding-top: 25px;
+            & h4.title{
+                margin-bottom: 5px;
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    &.style-three{
+        & .thumbnail{
+            position: relative;
+            z-index: 1;
+            & img{
+                border-radius: 10px;
+                width: 100%;
+            }
+            & .hover-content{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                padding: 30px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-start;
+            }
+            & .project-categories{
+                & a{
+                    background-color: $primary-black-color;
+                    padding: 10px 20px;
+                    line-height: 20px;
+                    color: $white-color;
+                    border-radius: 30px;
+                    @include respond(sm-phone){
+                        padding: 7px 15px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        & .content{
+            padding-top: 20px;
+            & h4{
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    &.style-four{
+        &:hover{
+            & .thumbnail{
+                & .hover-content{
+                    visibility: visible;
+                    opacity: 1;
+                    bottom: 30px;
+                }
+            }
+        }
+        & .thumbnail{
+            position: relative;
+            z-index: 1;
+            & img{
+                width: 100%;
+                min-height: 300px;
+            }
+            & .hover-content{
+                position: absolute;
+                bottom: 80px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80%;
+                padding: 20px 20px 15px;
+                background-color: #EBFFDC;
+                visibility: hidden;
+                opacity: 0;
+                transition: all .3s;
+                @include respond(tablet){
+                    width: 90%;
+                }
+                @include respond(medium){
+                    width: 90%;
+                }
+            }
+        }
+        & .content{
+            text-align: center;
+            & .category-btn{
+                padding: 8px 15px;
+                line-height: 20px;
+                border: 1px solid $border-color;
+                border-radius: 30px;
+                color: $heading-color;
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+            & h4{
+                max-width: 350px;
+                margin: 0 auto;
+                color: $heading-color;
+                @include respond(tablet){
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+                @include respond(phone){
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}
